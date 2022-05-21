@@ -1,0 +1,22 @@
+.navbar {
+    background-color: black;
+    box-shadow: 5px 10px 8px #8888880e;
+}
+
+.nav-link {
+    color: whitesmoke !important;
+}
+
+.navbar-link {
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.logout-button:hover {
+    color: darkolivegreen;
+}
+
+.logo {
+    height: 33px;
+}
