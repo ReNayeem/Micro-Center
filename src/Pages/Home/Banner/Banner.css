@@ -5,6 +5,50 @@
     background: none;
 }
 
+.banner-button {
+    border: none;
+    font-family: sans-serif;
+    font-size: 15px;
+    background: transparent;
+    color: black;
+    border: solid 1px rgb(0, 38, 63);
+    padding: 5px;
+    padding-top: 7px;
+    border-radius: 4px;
+    transition-duration: 0.2s;
+}
+
+.banner-button:before {
+    content: "»";
+    padding: 3px;
+    opacity: 0;
+    margin-left: -15px;
+    transition-duration: 0.2s;
+}
+
+.banner-button:hover:before {
+    margin-left: 0px;
+    opacity: 1;
+}
+
+.banner-button:hover {
+    color: black;
+    background: rgba(0, 0, 0, 0.02);
+    border: solid 1px black;
+}
+
+.banner-background {
+    background-image: url('../../../images/bannerBackground/bg5.jpg');
+}
+
+.banner-background-2 {
+    background-image: url('../../../images/bannerBackground/bg6.jpg');
+}
+
+.banner-background-3 {
+    background-image: url('../../../images/bannerBackground/bg7.jpg');
+}
+
 .banner-button span {
     padding-bottom: 7px;
     letter-spacing: 4px;
@@ -58,9 +102,9 @@
     transform-origin: bottom left;
 }
 
-.banner {
+/* .banner {
     background-color: whitesmoke;
-}
+} */
 
 .banner2 {
     justify-content: space-evenly;
@@ -80,7 +124,8 @@
 }
 
 .h1-text-highlight-b1 {
-    color: forestgreen;
+    color: darkslategrey;
+    font-weight: 700;
 }
 
 .h1-text-highlight-b2 {
@@ -97,14 +142,22 @@
 
 .product-detail {
     text-align: start;
-    color: rgb(99, 99, 99);
+    color: rgb(68, 68, 68);
+    font-family: "Playfair Display", serif;
+    font-size: 1.2rem;
 }
 
 .banner-h2 {
     font-family: "Playfair Display", serif;
     font-size: 24px;
     line-height: 30px;
-    text-align: start;
+    text-align: center;
+}
+
+hr {
+    height: 2px !important;
+    width: 50%;
+    margin: .5rem auto;
 }
 
 /* media query for product aka first section */

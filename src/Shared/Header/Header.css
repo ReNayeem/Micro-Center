@@ -1,5 +1,5 @@
 .navbar {
-    background-color: black;
+    background-color: rgb(75, 75, 75);
     box-shadow: 5px 10px 8px #8888880e;
 }
 
@@ -19,4 +19,5 @@
 
 .logo {
     height: 33px;
+    margin: 5px 0px;
 }
