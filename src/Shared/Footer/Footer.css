@@ -1,0 +1,70 @@
+.footer {
+    background: #1e1d23;
+    position: sticky;
+    top: 100%;
+}
+
+.footer .footer-link {
+    font-size: 1rem;
+    color: #1e1d23;
+    padding: 0 1.875rem;
+}
+
+.footer .footer-link:hover {
+    color: white;
+}
+
+.footer .footer-social a i {
+    font-size: 1.5rem;
+    color: white;
+    padding: 0 1rem;
+    transition: color 1s;
+    cursor: pointer;
+}
+
+.footer .footer-social a:hover i {
+    color: rgb(113, 146, 55);
+}
+
+.newsletter .form-control {
+    height: 3.225rem;
+    padding: 0 1.25rem;
+    font-size: .875rem;
+    width: 100%;
+    border-radius: 0;
+    background: transparent;
+    border: .1875rem solid white;
+    color: #1e1d23;
+    font-weight: 700;
+    transition: border .5s, color 1s;
+}
+
+.newsletter .footer-button {
+    height: 3.225rem;
+    padding: 0 1.25rem;
+    font-size: .875rem;
+    border-radius: 0 !important;
+    background-color: white;
+    border: .1875rem solid white !important;
+    color: #1e1d23;
+    font-weight: 700;
+    transition: background .5s, border 1s;
+    cursor: pointer;
+}
+
+.newsletter:hover .form-control {
+    border: .1875rem solid forestgreen;
+    color: white;
+}
+
+.newsletter:hover .footer-button {
+    background: forestgreen;
+    border: .1875rem solid forestgreen !important;
+}
+
+.newsletter .form-control:hover,
+.newsletter .form-control:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: forestgreen;
+}
