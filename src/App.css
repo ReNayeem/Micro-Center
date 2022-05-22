@@ -46,6 +46,35 @@ p {
   }
 }
 
+.custom-container {
+  min-height: calc(100vh - 32px - 16px - 72.2167px);
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.custom-button {
+  color: white;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  background-color: #0046be;
+  padding: 8px;
+  width: 224px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: .5rem;
+  font-weight: 600;
+  transition: color .5s, background-color .8s;
+}
+
+.custom-button:hover {
+  background-color: #001e73;
+  color: white !important;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

@@ -1,0 +1,67 @@
+.login {
+    display: flex;
+    flex-direction: column;
+}
+
+.p-text {
+    color: black !important;
+    font-size: .75rem;
+    line-height: .75rem;
+    border: none;
+    letter-spacing: 0.06rem;
+}
+
+.h5-text {
+    font-size: 1rem;
+    color: black !important;
+    margin-left: .7rem;
+}
+
+.form-container {
+    max-width: 240px !important;
+}
+
+.form-text {
+    justify-content: space-between !important;
+    min-width: 240px !important;
+}
+
+.form-input {
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+}
+
+.form-input:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: black;
+    background-color: whitesmoke;
+}
+
+.reset-button {
+    background-color: transparent !important;
+    color: rgb(35, 83, 224) !important;
+}
+
+::placeholder {
+    color: black !important;
+    opacity: 1;
+    /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: black !important;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: black !important;
+}
+
+.check-box {
+    color: black !important;
+    font-size: 1rem;
+    border: none !important;
+}
