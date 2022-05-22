@@ -19,9 +19,10 @@ const Items = () => {
         <div id="items" className='container mb-5'>
             <PageTitle title="Home"></PageTitle>
             <div className="row mb-3">
-                <div className='my-5 text-start'>
-                    <h1 className='item-h1'>FEATURED PRODUCTS</h1>
-
+                <div className='mt-5 mb-4 third-section'>
+                    <h1>Featured Products</h1>
+                    <hr />
+                    <p>Get Your Desired Product from Featured Products</p>
                 </div>
                 {
                     items.length === 0 ? (<Loading></Loading>) : ''
