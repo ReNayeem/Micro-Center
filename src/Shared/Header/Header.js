@@ -22,7 +22,7 @@ const Header = () => {
                     <Navbar.Brand as={Link} to="/">
                         <img className='logo' src={logo} alt="" />
                     </Navbar.Brand>
-                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Toggle className='custom-toggler' aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto navbar-link">
                             <Nav.Link className='nav-link' as={Link} to="/">Home</Nav.Link>

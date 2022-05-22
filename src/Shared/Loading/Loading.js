@@ -1,10 +1,26 @@
 import React from 'react';
-import { Spinner } from 'react-bootstrap';
+import './Loading.css'
 
 const Loading = () => {
     return (
-        <div className='w-100 mt-4 d-flex justify-content-center align-items-center'>
-            <Spinner animation="border" variant="warning" />
+        <div className='d-flex align-items-center justify-content-center'>
+            <div class="loader">
+                <svg viewBox="0 0 80 80">
+                    <circle id="test" cx="40" cy="40" r="32"></circle>
+                </svg>
+            </div>
+
+            <div class="loader triangle">
+                <svg viewBox="0 0 86 80">
+                    <polygon points="43 8 79 72 7 72"></polygon>
+                </svg>
+            </div>
+
+            <div class="loader">
+                <svg viewBox="0 0 80 80">
+                    <rect x="8" y="8" width="64" height="64"></rect>
+                </svg>
+            </div>
         </div>
     );
 };

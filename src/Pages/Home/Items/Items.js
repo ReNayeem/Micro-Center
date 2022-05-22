@@ -28,7 +28,7 @@ const Items = () => {
                 }
                 <div className="items-container">
                     {
-                        items.slice(0, 6).map(item => <Item
+                        items.slice(0, 3).map(item => <Item
                             key={item._id}
                             item={item}
                         >

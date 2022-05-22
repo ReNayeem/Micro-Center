@@ -6,7 +6,7 @@ import './ItemDetail.css'
 const ItemDetail = () => {
     const { itemId } = useParams();
     const [item, setItem] = useItemDetail(itemId);
-    const { _id, name, quantity, img, description, price } = item;
+    const { _id, name, quantity, img, minimumOrder, description, price } = item;
 
     const handleDeliver = () => {
         let deliver = 1;
@@ -74,12 +74,13 @@ const ItemDetail = () => {
             </div>
             <div className='item-details-2'>
                 <div className='d-flex flex-wrap item-details justify-content-center align-items-center'>
-                    <img className='item-detail-image' src={img} alt="" />
+                    <img className='item-detail-image px-5 pb-5 pb-lg-0' src={img} alt="" />
                     <div className='w-auto'>
-                        <h3 className='item-name text-lg-end text-center'>{name}</h3>
-                        <p className='item-description text-lg-end text-center'><small>{description}</small></p>
-                        <p className='item-detail text-lg-end text-center'>৳ {price} TK</p>
-                        <p className='item-detail text-lg-end text-center'>Quantity: {quantity}</p>
+                        <h4 className='text-lg-end text-center'>{name}</h4>
+                        <h5 className='text-lg-end text-center'><small>{description}</small></h5>
+                        <h3 className='text-lg-end text-center'>৳ {price} TK</h3>
+                        <h5 className='text-lg-end text-center'>Quantity: {quantity}</h5>
+                        <h5 className='text-lg-end text-center'>Minimum order required: {minimumOrder}</h5>
 
 
                     </div>

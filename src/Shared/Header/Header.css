@@ -21,3 +21,7 @@
     height: 33px;
     margin: 5px 0px;
 }
+
+.custom-toggler {
+    border-color: red !important;
+}
