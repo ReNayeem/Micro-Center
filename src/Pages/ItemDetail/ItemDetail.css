@@ -1,0 +1,50 @@
+.item-detail-image {
+    max-height: 400px;
+}
+
+.deliver-button {
+    background-color: rgb(117, 117, 117);
+    color: white;
+    padding: 0rem 1.48rem;
+    border: 2px solid rgb(117, 117, 117);
+    transition: border 1s, color .5s;
+}
+
+.deliver-button:hover {
+    background-color: white;
+    color: rgb(117, 117, 117);
+    border: 2px solid rgb(117, 117, 117);
+}
+
+.update-stock-button {
+    background-color: darkolivegreen;
+    color: white;
+    padding: 0rem 1.48rem;
+    border: 2px solid darkolivegreen;
+    transition: border 1s, color .5s;
+}
+
+.update-stock-button:hover {
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+}
+
+.quantity-input {
+    max-width: 11rem;
+    border: 2px solid darkolivegreen;
+    transition: border 1s, color .5s;
+}
+
+.update-item:hover .quantity-input {
+    border: 2px solid black;
+}
+
+.update-item:hover .update-stock-button {
+    border: 2px solid black;
+    background-color: black;
+}
+
+.quantity-input:focus {
+    outline: none;
+}

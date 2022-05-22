@@ -20,7 +20,7 @@ const Banner = () => {
                             <h1 className='product-name-text text-center'><span className='h1-text-highlight-b1'>H-O-M-E!<br />APPLIANCES</span></h1>
                             <hr />
                             <p className='product-detail text-center'>Good Price & Best Deals</p>
-                            <Link as={Link} to="/AllItems">
+                            <Link as={Link} to="/all-items">
                                 <button className="banner-button">
                                     BROWSE HERE
                                 </button>
@@ -41,7 +41,7 @@ const Banner = () => {
                             <h1 className='product-name-text text-center'><span className='h1-text-highlight-b1'>-FLAG-SHIP-<br />MODEL</span></h1>
                             <hr />
                             <p className='product-detail text-center'>INTERCHANGEABLE CAMERA WITH LENS</p>
-                            <Link as={Link} to="/AllItems">
+                            <Link as={Link} to="/all-items">
                                 <button className="banner-button">
                                     BROWSE HERE
                                 </button>
@@ -62,7 +62,7 @@ const Banner = () => {
                             <h1 className='product-name-text text-center'><span className='h1-text-highlight-b1'>-SONY- WIRELESS<br />HEADPHONE</span></h1>
                             <hr />
                             <p className='product-detail text-center'>Enjoy All The Audio In Your Smartphone</p>
-                            <Link as={Link} to="/AllItems">
+                            <Link as={Link} to="/all-items">
                                 <button className="banner-button">
                                     BROWSE HERE
                                 </button>

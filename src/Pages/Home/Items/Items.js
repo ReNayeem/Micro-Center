@@ -1,26 +1,34 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import useItems from '../../hooks/useItems';
-import Loading from '../../Shared/Loading/Loading';
-import PageTitle from '../../Shared/PageTitle/PageTitle';
-import Item from '../Home/Item/Item';
+import Loading from '../../../Shared/Loading/Loading';
+import PageTitle from '../../../Shared/PageTitle/PageTitle';
+import Item from '../Item/Item';
+import './Items.css';
 
-const AllItems = () => {
-    const [items] = useItems()
+const Items = () => {
+
+    const [items, setItems] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/items')
+            .then(res => res.json())
+            .then(data => setItems(data));
+    }, [])
 
     return (
         <div id="items" className='container mb-5'>
-            <PageTitle title="All Items"></PageTitle>
-            <div className="row">
-                <div className='my-5 text-center'>
-                    <h1 className='item-h1 text-start'>All Items</h1>
+            <PageTitle title="Home"></PageTitle>
+            <div className="row mb-3">
+                <div className='my-5 text-start'>
+                    <h1 className='item-h1'>FEATURED PRODUCTS</h1>
+
                 </div>
                 {
                     items.length === 0 ? (<Loading></Loading>) : ''
                 }
                 <div className="items-container">
                     {
-                        items.map(item => <Item
+                        items.slice(0, 6).map(item => <Item
                             key={item._id}
                             item={item}
                         >
@@ -28,10 +36,10 @@ const AllItems = () => {
                     }
                 </div>
             </div>
-            <div className='d-flex mt-3 justify-content-end'>
-                <Link as={Link} to="/AddItem">
+            <div className='d-flex justify-content-end'>
+                <Link as={Link} to="all-items">
                     <button className="banner-button">
-                        <span className="hover-underline-animation"> Add New Item </span>
+                        <span> All items </span>
                         <svg id="arrow-horizontal" xmlns="http://www.w3.org/2000/svg" width="30" height="10" viewBox="0 0 46 16">
                             <path id="Path_10" data-name="Path 10" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" transform="translate(30)"></path>
                         </svg>
@@ -42,4 +50,4 @@ const AllItems = () => {
     );
 };
 
-export default AllItems;
+export default Items;

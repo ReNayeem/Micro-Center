@@ -10,8 +10,12 @@ import Header from './Shared/Header/Header';
 import NotFound from './Shared/NotFound/NotFound';
 import Login from './Pages/Authentication/Login/Login';
 import Authentication from './Pages/Authentication/Authentication';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from './firebase.init';
 
 function App() {
+
+  const [user] = useAuthState(auth);
   return (
     <div className="App">
       <Header></Header>
@@ -26,6 +30,12 @@ function App() {
         <Route path="/register" element={<Register></Register>}></Route>
         <Route path="/item-detail" element={<ItemDetail></ItemDetail>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
+
+        <Route path='/item/:itemId'
+          element={
+            user ? <ItemDetail></ItemDetail> : <Authentication></Authentication>
+          }
+        ></Route>
       </Routes>
 
       <Footer></Footer>
