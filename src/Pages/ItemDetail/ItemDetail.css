@@ -1,5 +1,22 @@
 .item-detail-image {
-    max-height: 400px;
+    max-height: 490px;
+}
+
+.item-image {
+    width: 50%;
+}
+
+.item-name {
+    font-weight: 600;
+}
+
+.item-description-bold {
+    font-weight: 600;
+}
+
+.item-description {
+    width: 50%;
+    text-align: start;
 }
 
 .deliver-button {

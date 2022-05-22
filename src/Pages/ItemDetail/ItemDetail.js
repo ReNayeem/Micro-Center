@@ -6,7 +6,7 @@ import './ItemDetail.css'
 const ItemDetail = () => {
     const { itemId } = useParams();
     const [item, setItem] = useItemDetail(itemId);
-    const { _id, name, quantity, img, minimumOrder, description, price } = item;
+    const { _id, name, fullName, rated, processor, speed, ram, gpu, storage, os, quantity, img, minimumOrder, description, price } = item;
 
     const handleDeliver = () => {
         let deliver = 1;
@@ -74,15 +74,22 @@ const ItemDetail = () => {
             </div>
             <div className='item-details-2'>
                 <div className='d-flex flex-wrap item-details justify-content-center align-items-center'>
-                    <img className='item-detail-image px-5 pb-5 pb-lg-0' src={img} alt="" />
-                    <div className='w-auto'>
-                        <h4 className='text-lg-end text-center'>{name}</h4>
-                        <h5 className='text-lg-end text-center'><small>{description}</small></h5>
-                        <h3 className='text-lg-end text-center'>৳ {price} TK</h3>
-                        <h5 className='text-lg-end text-center'>Quantity: {quantity}</h5>
-                        <h5 className='text-lg-end text-center'>Minimum order required: {minimumOrder}</h5>
-
-
+                    <div className='item-image'>
+                        <img className='item-detail-image' src={img} alt="" />
+                    </div>
+                    <div className='item-description'>
+                        <h3 className='item-name'>{fullName}</h3>
+                        <p>{rated}</p>
+                        <p className='item-description-bold'>৳ {price} TK</p>
+                        <p>Quantity Available: {quantity}</p>
+                        <h5 className='mt-1 mb-3'>Description:</h5>
+                        <p>Processor: {processor}</p>
+                        <p>Processor Speed: {speed}</p>
+                        <p>RAM: {ram}</p>
+                        <p>Graphics Card: {gpu}</p>
+                        <p>Storage: {storage}</p>
+                        <p>OS: {os}</p>
+                        <p className='item-description-bold'>Minimum Order: {minimumOrder}</p>
                     </div>
                 </div>
                 <div className="d-flex mt-3 flex-column align-items-center justify-content-center flex-wrap">

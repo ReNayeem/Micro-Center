@@ -25,3 +25,15 @@
 .custom-toggler {
     border-color: red !important;
 }
+
+.sign-out {
+    background-color: transparent !important;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    transition: color 1s;
+}
+
+.sign-out:hover {
+    color: rgb(157, 162, 255);
+}
