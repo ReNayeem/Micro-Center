@@ -14,6 +14,9 @@ const AllReviews = () => {
                     <hr />
                     <p>See our all valuable customers review</p>
                 </div>
+                {
+                    reviews.length === 0 ? (<Loading></Loading>) : ''
+                }
                 <div className='home-reviews container pb-5'>
                     {
                         reviews.map(review => <Reviews key={review.id} review={review}></Reviews>)
