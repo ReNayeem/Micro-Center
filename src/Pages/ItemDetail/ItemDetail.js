@@ -6,65 +6,8 @@ import './ItemDetail.css'
 const ItemDetail = () => {
     const { itemId } = useParams();
     const [item, setItem] = useItemDetail(itemId);
-    const { _id, name, fullName, rated, processor, speed, ram, gpu, storage, os, quantity, img, minimumOrder, description, price } = item;
+    const { _id, name, fullName, rated, processor, speed, ram, gpu, storage, os, quantity, img, minimumOrder, price } = item;
 
-    const handleDeliver = () => {
-        let deliver = 1;
-        let quantityNumber = parseInt(item.quantity);
-        let quantity = quantityNumber - deliver;
-
-        let newQuantity = {
-            _id: item._id,
-            name: item.name,
-            quantity: quantity,
-            img: item.img,
-            description: item.description,
-            price: item.price
-        }
-        const url = `http://localhost:5000/items/${itemId}`
-        fetch(url, {
-            method: 'PUT',
-            headers: {
-                "content-type": 'application/json'
-            },
-            body: JSON.stringify(newQuantity)
-        }).then(res => res.json())
-            .then(data => {
-                if (data.modifiedCount > 0) {
-                    setItem(newQuantity)
-                }
-            })
-    }
-    const newStock = e => {
-        e.preventDefault();
-        let quantityPrevious = item.quantity;
-        let quantityPreviousNum = parseInt(quantityPrevious);
-        let taken = parseInt(e.target.number.value);
-        let quantity = quantityPreviousNum + taken;
-
-        let newQuantity = {
-            _id: item._id,
-            name: item.name,
-            quantity: quantity,
-            img: item.img,
-            description: item.description,
-            price: item.price
-        }
-        const url = `http://localhost:5000/items/${itemId}`
-        fetch(url, {
-            method: 'PUT',
-            headers: {
-                "content-type": 'application/json'
-            },
-            body: JSON.stringify(newQuantity)
-        }).then(res => res.json())
-            .then(data => {
-                if (data.modifiedCount > 0) {
-                    setItem(newQuantity)
-                    e.target.reset();
-                }
-            })
-    }
     return (
         <div className='container mb-5'>
             <div className='my-5 item-text-header text-center'>
@@ -93,9 +36,9 @@ const ItemDetail = () => {
                     </div>
                 </div>
                 <div className="d-flex mt-3 flex-column align-items-center justify-content-center flex-wrap">
-                    <button onClick={() => { handleDeliver() }}
+                    <button
                         className="deliver-button mb-3">DELIVER</button>
-                    <form className='update-item' onSubmit={newStock}>
+                    <form className='update-item' >
                         <span className="d-flex">
                             <input placeholder='input here' className='quantity-input text-center' type="number" name="number" required /> <br />
                             <input className="update-stock-button" type="submit" value="UPDATE STOCK" />

@@ -1,6 +1,6 @@
 .navbar {
-    background-color: rgb(75, 75, 75);
-    box-shadow: 5px 10px 8px #8888880e;
+    background-color: #000000;
+    box-shadow: 5px 10px 8px #5c5c5c1e;
 }
 
 .nav-link {
@@ -23,7 +23,7 @@
 }
 
 .custom-toggler {
-    border-color: red !important;
+    border-color: #3ecaff !important;
 }
 
 .sign-out {

@@ -1,0 +1,30 @@
+.trust {
+    /* background-color: #f8f8f8; */
+    background-image: url('../../../images//bg3.jpg');
+}
+
+.trust-icon {
+    font-size: 70px;
+    margin-bottom: .5rem;
+}
+
+.trust-h1 {
+    font-weight: 700;
+    font-size: 3em;
+}
+
+.trust-h3,
+.trust-icon {
+    color: #28aaa9;
+}
+
+.trust2 {
+    width: 250px;
+    height: auto;
+}
+
+.trust-h3 {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: capitalize;
+}

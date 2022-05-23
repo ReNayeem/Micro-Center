@@ -81,7 +81,7 @@
     height: 10px !important;
     border: 1px solid transparent !important;
     border-radius: 10px;
-    background-color: forestgreen !important;
+    background-color: #37b5f8 !important;
 }
 
 .hover-underline-animation:after {
@@ -158,6 +158,11 @@ hr {
     height: 2px !important;
     width: 50%;
     margin: .5rem auto;
+}
+
+.banner {
+    height: 60vh;
+    display: flex;
 }
 
 /* media query for product aka first section */

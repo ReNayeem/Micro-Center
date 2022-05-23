@@ -19,7 +19,7 @@ const Items = () => {
         <div id="items" className='container mb-5'>
             <PageTitle title="Home"></PageTitle>
             <div className="row mb-3">
-                <div className='mt-5 mb-4 third-section'>
+                <div className='mb-4 third-section'>
                     <h1>Featured Products</h1>
                     <hr />
                     <p>Get Your Desired Product from Featured Products</p>
