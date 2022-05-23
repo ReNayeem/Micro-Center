@@ -13,6 +13,7 @@ import Authentication from './Pages/Authentication/Authentication';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from './firebase.init';
 import { Toaster } from 'react-hot-toast';
+import AllReviews from './Pages/AllReviews/AllReviews';
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
         <Route path="/register" element={<Register></Register>}></Route>
         <Route path="/item-detail" element={<ItemDetail></ItemDetail>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
+        <Route path="/all-reviews" element={<AllReviews></AllReviews>}></Route>
 
         <Route path='/item/:itemId'
           element={

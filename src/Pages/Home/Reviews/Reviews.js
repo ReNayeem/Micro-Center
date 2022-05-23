@@ -6,10 +6,10 @@ const Reviews = ({ review }) => {
     return (
         <div className='reviews-style'>
             <h4>{userName}</h4>
-            <p>review of product {itemName}</p>
+            <p>review of product ({itemName})</p>
             <div className='reviews-position'>
                 <h5>{description}</h5>
-                <h6>{rating}</h6>
+                <h5>Rating: {rating}⭐</h5>
             </div>
         </div>
     );

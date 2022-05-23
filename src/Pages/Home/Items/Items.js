@@ -16,13 +16,13 @@ const Items = () => {
     }, [])
 
     return (
-        <div id="items" className='container mb-5'>
+        <div id="items" className='container my-5'>
             <PageTitle title="Home"></PageTitle>
             <div className="row mb-3">
                 <div className='mb-4 third-section'>
-                    <h1>Featured Products</h1>
+                    <h1>Featured Items</h1>
                     <hr />
-                    <p>Get Your Desired Product from Featured Products</p>
+                    <p>Get Your Desired Item from Featured Items</p>
                 </div>
                 {
                     items.length === 0 ? (<Loading></Loading>) : ''

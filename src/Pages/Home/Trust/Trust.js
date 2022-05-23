@@ -3,7 +3,7 @@ import './Trust.css'
 
 const Trust = () => {
     return (
-        <div className='d-flex mb-5 align-items-center justify-content-center trust flex-wrap'>
+        <div className='d-flex align-items-center justify-content-center trust flex-wrap'>
             <div className='p-5 m-2 trust2'>
                 <i className="fa-solid fa-flag trust-icon"></i>
                 <h1 className='trust-h1'>77</h1>

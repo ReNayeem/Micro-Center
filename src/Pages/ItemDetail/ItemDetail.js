@@ -1,5 +1,6 @@
 import { Link, useParams } from 'react-router-dom';
 import useItemDetail from '../../hooks/useItemDetail';
+import Loading from '../../Shared/Loading/Loading';
 
 import './ItemDetail.css'
 
@@ -11,10 +12,13 @@ const ItemDetail = () => {
     return (
         <div className='container mb-5'>
             <div className='my-5 item-text-header text-center'>
-                <p>Product detail of</p>
+                <p>Item detail of</p>
                 <h1>{name}</h1>
                 <hr />
             </div>
+            {
+                item.length === 0 ? (<Loading></Loading>) : ''
+            }
             <div className='item-details-2'>
                 <div className='d-flex flex-wrap item-details justify-content-center align-items-center'>
                     <div className='item-image'>
@@ -37,19 +41,15 @@ const ItemDetail = () => {
                         <form className='update-item' >
                             <span className="d-flex">
                                 <input placeholder='add quantity here' className='quantity-input text-center' type="number" name="number" required /> <br />
-                                <input className="update-stock-button" type="submit" value="BUY NOW" />
+                                <div className="update-stock-button">
+                                    <i class="fa-solid fa-cart-shopping cart-icon"></i>
+                                    <input className='buy-now-button' type="submit" value="BUY NOW" />
+                                </div>
                             </span>
                         </form>
                     </div>
                 </div>
-                {/* <div className="d-flex mt-5 flex-column align-items-center justify-content-center flex-wrap">
-                    <form className='update-item' >
-                        <span className="d-flex">
-                            <input placeholder='add quantity here' className='quantity-input text-center' type="number" name="number" required /> <br />
-                            <input className="update-stock-button" type="submit" value="BUY NOW" />
-                        </span>
-                    </form>
-                </div> */}
+
             </div>
             {/* <div className='d-flex mt-3 justify-content-center justify-content-lg-end'>
                 <Link as={Link} to="/manage">

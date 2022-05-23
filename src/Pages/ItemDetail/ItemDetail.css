@@ -34,11 +34,19 @@
 }
 
 .update-stock-button {
-    background-color: #9d6be8;
-    color: white;
+    background-color: #ffe000;
+    color: black;
     padding: .6rem 3rem;
-    border: 2px solid #9d6be8;
+    cursor: pointer;
+    font-weight: 600;
+    border: 2px solid #ffe000;
     transition: border 1s, background-color 1s, color .5s;
+}
+
+.buy-now-button {
+    color: black;
+    transition: border 1s, background-color 1s, color .5s;
+    font-weight: 600;
 }
 
 .update-stock-button:hover {
@@ -47,9 +55,13 @@
     border: 2px solid black;
 }
 
+.buy-now-button:hover {
+    color: white;
+}
+
 .quantity-input {
     max-width: 11rem;
-    border: 2px solid #9d6be8;
+    border: 2px solid #ffe000;
     transition: border 1s, color .5s;
 }
 
@@ -60,10 +72,21 @@
 .update-item:hover .update-stock-button {
     border: 2px solid black;
     background-color: black;
+    color: white;
+}
+
+.update-item:hover .buy-now-button {
+    color: white;
 }
 
 .quantity-input:focus {
     outline: none;
+}
+
+.buy-now-button {
+    background-color: transparent;
+    border: none;
+    padding-left: 1rem;
 }
 
 @media only screen and (max-width: 440px) {
@@ -79,5 +102,14 @@
     .item-detail-image {
         max-height: 350px;
         margin-bottom: 2rem;
+    }
+
+    .update-item {
+        display: flex;
+        justify-content: center;
+    }
+
+    .update-stock-button {
+        padding: .6rem 1.9rem;
     }
 }

@@ -1,18 +1,23 @@
 import React from 'react';
-import { Navigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 import useReviews from '../../../hooks/useReviews';
 import Reviews from '../Reviews/Reviews';
 import './Review.css'
 
 const Review = () => {
     const [reviews, setReviews] = useReviews();
+    const navigate = useNavigate()
     const clickToAllReviews = () => {
-        Navigate('/reviews')
+        navigate('/all-reviews')
     }
     return (
         <div>
             <div className='second-section pb-5'>
-                <h1 className='p-5'>Customer Reviews</h1>
+                <div className='p-5'>
+                    <h2>Customer Reviews</h2>
+                    <hr />
+                    <p>See our valuable new customers review</p>
+                </div>
                 <div className='home-reviews container'>
                     {
                         reviews.slice(0, 3).map(review => <Reviews key={review.id} review={review}></Reviews>)

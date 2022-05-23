@@ -12,8 +12,10 @@ const AllItems = () => {
         <div id="items" className='container mb-5'>
             <PageTitle title="All Items"></PageTitle>
             <div className="row">
-                <div className='my-5 text-center'>
-                    <h1 className='item-h1 text-start'>All Items</h1>
+                <div className='mb-4 mt-5 third-section'>
+                    <h1>All Items</h1>
+                    <hr />
+                    <p>Get Your Desired Item from All Items</p>
                 </div>
                 {
                     items.length === 0 ? (<Loading></Loading>) : ''
