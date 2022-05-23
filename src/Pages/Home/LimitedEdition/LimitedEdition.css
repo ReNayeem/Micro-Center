@@ -1,0 +1,40 @@
+.limited-edition {
+    background-color: rgb(27, 27, 27);
+    color: #fd6204;
+    padding: 4rem;
+}
+
+/* .limited-edition-h1 {
+    border-bottom: 2px solid #fd6204;
+    padding: .5rem;
+    width: 25%;
+} */
+
+.limited-edition-hr {
+    width: 25%;
+}
+
+.limited-edition-detail {
+    width: 50%;
+}
+
+.limited-edition-image {
+    width: 50%;
+}
+
+@media only screen and (max-width:576px) {
+    .limited-edition-detail {
+        width: 100%;
+        order: 1;
+    }
+
+    .limited-edition-image {
+        width: auto;
+        height: 300px;
+        order: 0;
+    }
+
+    .limited-edition-hr {
+        width: 75% !important;
+    }
+}

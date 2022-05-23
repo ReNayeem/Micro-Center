@@ -177,6 +177,14 @@ hr {
 
 @media only screen and (max-width: 440px) {
     .product-image {
-        max-height: 310px;
+        max-height: 200px;
+    }
+
+    .banner-button {
+        margin-bottom: 1rem;
+    }
+
+    .banner {
+        min-height: 625px;
     }
 }

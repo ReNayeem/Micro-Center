@@ -3,7 +3,7 @@ import './Upcoming.css'
 
 const Upcoming = () => {
     return (
-        <div className="third-section mb-5 container">
+        <div className="third-section my-5 container">
             <h1>Upcoming Products Category</h1>
             <hr />
             <p className='mb-5'>Register for New Upcoming Products and Discounts Offer Notification</p>
