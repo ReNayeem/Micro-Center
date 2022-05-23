@@ -1,5 +1,5 @@
 .item-detail-image {
-    max-height: 490px;
+    max-height: 533px;
 }
 
 .item-image {
@@ -34,11 +34,11 @@
 }
 
 .update-stock-button {
-    background-color: darkolivegreen;
+    background-color: #9d6be8;
     color: white;
-    padding: 0rem 1.48rem;
-    border: 2px solid darkolivegreen;
-    transition: border 1s, color .5s;
+    padding: .6rem 3rem;
+    border: 2px solid #9d6be8;
+    transition: border 1s, background-color 1s, color .5s;
 }
 
 .update-stock-button:hover {
@@ -49,7 +49,7 @@
 
 .quantity-input {
     max-width: 11rem;
-    border: 2px solid darkolivegreen;
+    border: 2px solid #9d6be8;
     transition: border 1s, color .5s;
 }
 
@@ -64,4 +64,20 @@
 
 .quantity-input:focus {
     outline: none;
+}
+
+@media only screen and (max-width: 440px) {
+    .item-description {
+        width: auto;
+        text-align: center;
+    }
+
+    .item-image {
+        width: auto;
+    }
+
+    .item-detail-image {
+        max-height: 350px;
+        margin-bottom: 2rem;
+    }
 }

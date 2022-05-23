@@ -8,6 +8,7 @@ import SocialLogin from '../SocialLogin/SocialLogin';
 import auth from '../../../firebase.init';
 import Loading from '../../../Shared/Loading/Loading';
 import PageTitle from '../../../Shared/PageTitle/PageTitle';
+import toast from 'react-hot-toast';
 
 
 const Login = () => {
@@ -44,10 +45,10 @@ const Login = () => {
         const email = emailRef.current.value;
         if (email) {
             await sendPasswordResetEmail(email);
-            alert('Email sent successful')
+            toast.success('Email successfully sent')
         }
         else {
-            alert('Please enter your email!')
+            toast.error('Please enter your email')
         }
     }
 

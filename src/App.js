@@ -12,6 +12,7 @@ import Login from './Pages/Authentication/Login/Login';
 import Authentication from './Pages/Authentication/Authentication';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from './firebase.init';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
 
@@ -39,6 +40,7 @@ function App() {
       </Routes>
 
       <Footer></Footer>
+      <Toaster></Toaster>
     </div>
   );
 }

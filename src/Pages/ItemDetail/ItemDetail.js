@@ -33,20 +33,25 @@ const ItemDetail = () => {
                         <p>Storage: {storage}</p>
                         <p>OS: {os}</p>
                         <p className='item-description-bold'>Minimum Order: {minimumOrder}</p>
+
+                        <form className='update-item' >
+                            <span className="d-flex">
+                                <input placeholder='add quantity here' className='quantity-input text-center' type="number" name="number" required /> <br />
+                                <input className="update-stock-button" type="submit" value="BUY NOW" />
+                            </span>
+                        </form>
                     </div>
                 </div>
-                <div className="d-flex mt-3 flex-column align-items-center justify-content-center flex-wrap">
-                    <button
-                        className="deliver-button mb-3">DELIVER</button>
+                {/* <div className="d-flex mt-5 flex-column align-items-center justify-content-center flex-wrap">
                     <form className='update-item' >
                         <span className="d-flex">
-                            <input placeholder='input here' className='quantity-input text-center' type="number" name="number" required /> <br />
-                            <input className="update-stock-button" type="submit" value="UPDATE STOCK" />
+                            <input placeholder='add quantity here' className='quantity-input text-center' type="number" name="number" required /> <br />
+                            <input className="update-stock-button" type="submit" value="BUY NOW" />
                         </span>
                     </form>
-                </div>
+                </div> */}
             </div>
-            <div className='d-flex mt-3 justify-content-center justify-content-lg-end'>
+            {/* <div className='d-flex mt-3 justify-content-center justify-content-lg-end'>
                 <Link as={Link} to="/manage">
                     <button className="banner-button">
                         <span className="hover-underline-animation"> Manage items </span>
@@ -55,7 +60,7 @@ const ItemDetail = () => {
                         </svg>
                     </button>
                 </Link>
-            </div>
+            </div> */}
         </div>
     );
 };
