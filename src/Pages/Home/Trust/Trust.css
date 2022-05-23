@@ -4,13 +4,13 @@
 }
 
 .trust-icon {
-    font-size: 70px;
+    font-size: 50px;
     margin-bottom: .5rem;
 }
 
 .trust-h1 {
     font-weight: 700;
-    font-size: 3em;
+    font-size: 2.5em;
 }
 
 .trust-h3,
@@ -19,12 +19,12 @@
 }
 
 .trust2 {
-    width: 250px;
+    width: 230px;
     height: auto;
 }
 
 .trust-h3 {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
-    text-transform: capitalize;
+    text-transform: uppercase;
 }

@@ -1,70 +1,79 @@
-.footer {
-    background: #1e1d23;
+footer {
     position: sticky;
     top: 100%;
 }
 
-.footer .footer-link {
-    font-size: 1rem;
-    color: #1e1d23;
-    padding: 0 1.875rem;
-}
-
-.footer .footer-link:hover {
-    color: white;
-}
-
-.footer .footer-social a i {
-    font-size: 1.5rem;
-    color: white;
-    padding: 0 1rem;
-    transition: color 1s;
+footer a {
     cursor: pointer;
+    color: #6a6c6e;
+    text-decoration: none;
+    transition: .3s all ease;
+    font-size: 15px;
+    line-height: 1.8;
+    font-weight: normal;
+    font-family: "Poppins", Arial, sans-serif;
 }
 
-.footer .footer-social a:hover i {
-    color: rgb(113, 146, 55);
-}
-
-.newsletter .form-control {
-    height: 3.225rem;
-    padding: 0 1.25rem;
-    font-size: .875rem;
-    width: 100%;
-    border-radius: 0;
-    background: transparent;
-    border: .1875rem solid white;
-    color: #1e1d23;
-    font-weight: 700;
-    transition: border .5s, color 1s;
-}
-
-.newsletter .footer-button {
-    height: 3.225rem;
-    padding: 0 1.25rem;
-    font-size: .875rem;
-    border-radius: 0 !important;
-    background-color: white;
-    border: .1875rem solid white !important;
-    color: #1e1d23;
-    font-weight: 700;
-    transition: background .5s, border 1s;
-    cursor: pointer;
-}
-
-.newsletter:hover .form-control {
-    border: .1875rem solid forestgreen;
+footer a:hover {
     color: white;
 }
 
-.newsletter:hover .footer-button {
-    background: forestgreen;
-    border: .1875rem solid forestgreen !important;
+footer .logo {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 19px;
 }
 
-.newsletter .form-control:hover,
-.newsletter .form-control:focus {
-    outline: none;
-    box-shadow: none;
-    border-color: forestgreen;
+.footer-02 {
+    color: #bba387;
+}
+
+.mr-md-3,
+.mx-md-3 {
+    margin: 1rem !important;
+}
+
+.footer-02 .partner-wrap .btn-custom {
+    font-size: 14px;
+}
+
+.footer-02 a {
+    color: #bba387;
+}
+
+.footer-02 .partner-wrap h3 {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.footer-02 .partner-wrap .partner-name a {
+    margin-right: 10px;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+footer p {
+    color: rgba(255, 255, 255, 0.3);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-family: "Poppins", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.8;
+    font-weight: normal;
+}
+
+.footer-heading {
+    font-size: 19px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 20px;
+}
+
+footer .footer-border {
+    border-left: 1px solid #1f2325 !important;
+}
+
+footer {
+    background-color: #131719;
+    padding: 75px 0px;
 }
