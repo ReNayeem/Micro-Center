@@ -3,8 +3,27 @@
     box-shadow: 5px 10px 8px #5c5c5c1e;
 }
 
-.nav-link {
+.active-link {
+    color: #33a9ee !important;
+}
+
+.link {
     color: whitesmoke !important;
+    transition: color 1s;
+}
+
+.link:hover {
+    color: #33a9ee !important;
+}
+
+.nav-title {
+    color: whitesmoke !important;
+    text-decoration: none;
+    transition: color 1s;
+}
+
+.nav-title:hover {
+    color: #33a9ee !important;
 }
 
 .navbar-link {
@@ -23,7 +42,8 @@
 }
 
 .custom-toggler {
-    border-color: #3ecaff !important;
+    border-color: #fd6204 !important;
+    background-color: #fd6204;
 }
 
 .sign-out {

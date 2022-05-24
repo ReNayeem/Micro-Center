@@ -17,7 +17,7 @@ const Banner = () => {
                         <div className='first-order'>
                             <h2 className='mb-3 banner-h2'>Great Selection of</h2>
                             <hr />
-                            <h1 className='product-name-text text-center'><span className='h1-text-highlight-b1'>-DESKTOP-<br />COMPUTER</span></h1>
+                            <h1 className='product-name-text text-center'><span className='h1-text-highlight-b1'>-DESKTOP-<br />COMPUTER CASING</span></h1>
                             <hr />
                             <p className='product-detail text-center'>Good Price & Best Deals</p>
                             <Link as={Link} to="/all-items">
@@ -59,7 +59,7 @@ const Banner = () => {
                         <div className='first-order'>
                             <h2 className='mb-3 banner-h2'>Easier Than Connecting A Cable</h2>
                             <hr />
-                            <h1 className='product-name-text text-center'><span className='h1-text-highlight-b1'>-GAMING- DESKTOP<br />COLLECTION</span></h1>
+                            <h1 className='product-name-text text-center'><span className='h1-text-highlight-b1'>-GAMING-CASING-<br />COLLECTION</span></h1>
                             <hr />
                             <p className='product-detail text-center'>Enjoy All The Gaming In Your Desktop</p>
                             <Link as={Link} to="/all-items">

@@ -1,0 +1,33 @@
+.side-nav {
+    margin-top: 69px;
+    height: calc(100vh - 514.8px - 69px);
+    background-color: whitesmoke;
+    max-width: 11rem;
+}
+
+.dashboard-button {
+    border: 1px solid black;
+    color: white;
+    background-color: black;
+    padding: .5rem 1rem;
+    transition: all ease 1s;
+}
+
+.dashboard-button:hover {
+    background-color: white;
+    color: black;
+}
+
+@media only screen and (max-width: 440px) {
+    .dashboard-button {
+        position: fixed;
+    }
+
+    .dashboard-title {
+        margin-top: 5rem;
+    }
+
+    .dashboard {
+        justify-content: end !important;
+    }
+}

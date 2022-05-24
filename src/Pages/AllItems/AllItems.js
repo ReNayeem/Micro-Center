@@ -12,7 +12,7 @@ const AllItems = () => {
         <div id="items" className='container mb-5'>
             <PageTitle title="All Items"></PageTitle>
             <div className="row">
-                <div className='mb-4 mt-5 third-section'>
+                <div id='items-title' className='mb-4 mt-5 third-section'>
                     <h1>All Items</h1>
                     <hr />
                     <p>Get Your Desired Item from All Items</p>

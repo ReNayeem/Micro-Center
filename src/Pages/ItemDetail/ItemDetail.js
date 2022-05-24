@@ -21,21 +21,24 @@ const ItemDetail = () => {
             }
             <div className='item-details-2'>
                 <div className='d-flex flex-wrap item-details justify-content-center align-items-center'>
-                    <div className='item-image'>
+                    <div className='item-image text-start'>
                         <img className='item-detail-image' src={img} alt="" />
+                        <h5 className='mt-1 mb-3'>Supported Description:</h5>
+                        <p>Processor up-to: {processor}</p>
+                        <p>Graphics Card up-to: {gpu}</p>
                     </div>
                     <div className='item-description'>
-                        <h3 className='item-name'>{fullName}</h3>
+                        <h3 className='item-name'>Best build for: {fullName}</h3>
                         <p>{rated}</p>
                         <p className='item-description-bold'>৳ {price} TK</p>
                         <p>Quantity Available: {quantity}</p>
-                        <h5 className='mt-1 mb-3'>Description:</h5>
-                        <p>Processor: {processor}</p>
-                        <p>Processor Speed: {speed}</p>
-                        <p>RAM: {ram}</p>
-                        <p>Graphics Card: {gpu}</p>
-                        <p>Storage: {storage}</p>
-                        <p>OS: {os}</p>
+                        <h5 className='mt-1 mb-3'>Supported Description:</h5>
+                        <p>Processor up-to: {processor}</p>
+                        {/* <p>Processor Speed: {speed}</p> */}
+                        {/* <p>RAM: {ram}</p> */}
+                        <p>Graphics Card up-to: {gpu}</p>
+                        {/* <p>Storage: {storage}</p> */}
+                        {/* <p>OS: {os}</p> */}
                         <p className='item-description-bold'>Minimum Order: {minimumOrder}</p>
 
                         <form className='update-item' >

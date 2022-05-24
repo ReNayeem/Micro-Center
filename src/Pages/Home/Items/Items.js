@@ -10,7 +10,7 @@ const Items = () => {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        fetch('https://micro-center.herokuapp.com/items')
+        fetch('http://localhost:5000/items')
             .then(res => res.json())
             .then(data => setItems(data));
     }, [])
@@ -19,7 +19,7 @@ const Items = () => {
         <div id="items" className='container my-5'>
             <PageTitle title="Home"></PageTitle>
             <div className="row mb-3">
-                <div className='mb-4 third-section'>
+                <div id='items-title' className='third-section'>
                     <h1>Featured Items</h1>
                     <hr />
                     <p>Get Your Desired Item from Featured Items</p>

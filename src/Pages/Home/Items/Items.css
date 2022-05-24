@@ -42,6 +42,10 @@
     justify-content: start;
 }
 
+#items-title {
+    margin-bottom: 2rem !important;
+}
+
 @media only screen and (max-width:576px) {
     .items-container {
         grid-template-columns: repeat(1, 1fr);

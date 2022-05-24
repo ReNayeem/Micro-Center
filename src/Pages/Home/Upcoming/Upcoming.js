@@ -4,9 +4,9 @@ import './Upcoming.css'
 const Upcoming = () => {
     return (
         <div className="third-section my-5 container">
-            <h1>Upcoming Products Category</h1>
+            <h1>Upcoming Items Category</h1>
             <hr />
-            <p className='mb-5'>Register for New Upcoming Products and Discounts Offer Notification</p>
+            <p className='mb-5'>Register for New Upcoming Items and Discounts Offer Notification</p>
             <div className="third-section-categories">
                 <div className="third-section-category">
                     <span><i className="fas fa-camera"></i></span>

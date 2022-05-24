@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './Header.css'
 import logo from '../../../src/MicroCenter.png'
 import { useAuthState } from 'react-firebase-hooks/auth';
@@ -25,26 +25,27 @@ const Header = () => {
                     <Navbar.Toggle className='custom-toggler' aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto navbar-link">
-                            <Nav.Link className='nav-link' as={Link} to="/">Home</Nav.Link>
-                            <Nav.Link className='nav-link' as={Link} to="/all-items">All Items</Nav.Link>
-                            <Nav.Link className='nav-link' as={Link} to="/all-reviews">All Reviews</Nav.Link>
-                            <Nav.Link className='nav-link' as={Link} to="blogs">Blogs</Nav.Link>
+                            <NavLink className={({ isActive }) => (isActive ? "active-link nav-link" : "link nav-link ")} as={Link} to="/">Home</NavLink>
+                            <NavLink className={({ isActive }) => (isActive ? "active-link nav-link" : "link nav-link ")} as={Link} to="/all-items">All Items</NavLink>
+                            <NavLink className={({ isActive }) => (isActive ? "active-link nav-link" : "link nav-link ")} as={Link} to="/all-reviews">All Reviews</NavLink>
+                            <NavLink className={({ isActive }) => (isActive ? "active-link nav-link" : "link nav-link ")} as={Link} to="blogs">Blogs</NavLink>
                         </Nav>
                         <Nav className='navbar-link'>
                             {
                                 user && <>
 
-                                    <Nav.Link className='nav-link' as={Link} to="all-items">All Items</Nav.Link>
+                                    <NavLink className={({ isActive }) => (isActive ? "active-link nav-link" : "link nav-link ")} as={Link} to="dashboard">Dashboard</NavLink>
                                 </>
                             }
 
 
 
                             {
-                                user ? <button className='border-0 p-2 sign-out' onClick={handleSignOut}>Sign out</button> :
-                                    <Nav.Link className='nav-title' as={Link} to="login">
+                                user ? <button className='border-0 p-2 sign-out' onClick={handleSignOut}>Sign out</button>
+                                    :
+                                    <NavLink className={({ isActive }) => (isActive ? "active-link nav-link" : "link nav-link ")} as={Link} to="login">
                                         Login
-                                    </Nav.Link>
+                                    </NavLink>
                             }
                         </Nav>
                     </Navbar.Collapse>

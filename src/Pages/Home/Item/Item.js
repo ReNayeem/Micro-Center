@@ -17,7 +17,7 @@ const Item = ({ item }) => {
             <h3 className='item-name'>{name}</h3>
             <p className='item-detail my-2'>৳ {price} TK</p>
             <p className='item-detail'>Quantity: {quantity}</p>
-            <p className='item-description-2 mb-5'><small>{fullName}</small></p>
+            <p className='item-description-2 mb-5'><small>Best build for: {fullName}</small></p>
 
             {/* <button onClick={() => navigateToItemDetail(_id)} className='manage-button'>Buy Now</button> */}
             <div className='manage-button'>
