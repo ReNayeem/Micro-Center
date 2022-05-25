@@ -30,7 +30,45 @@
 }
 
 .user-profile-container {
-    max-width: 600px;
+    max-width: 700px;
+    height: 80vh;
+    margin-top: 0;
+
+}
+
+.user-profile-container input {
+    padding: .5rem .5rem;
+    border-radius: .5rem;
+    border: 1px solid darkgray !important;
+}
+
+.user-email {
+    color: darkslategray;
+}
+
+.user-profile-h4-text {
+    font-family: var(--roboto) !important;
+    color: darkslateblue;
+}
+
+.inside-user-profile-h4-text {
+    font-family: var(--inter) !important;
+    color: teal !important;
+}
+
+.edit-profile-button {
+    background-color: transparent;
+    color: #001e73;
+    font-weight: 600;
+    padding: .5rem 0rem;
+    border: 1px solid #001e73 !important;
+    border-radius: .5rem;
+    transition: all ease 1s;
+}
+
+.edit-profile-button:hover {
+    color: white;
+    background-color: #001e73;
 }
 
 @media only screen and (max-width: 440px) {

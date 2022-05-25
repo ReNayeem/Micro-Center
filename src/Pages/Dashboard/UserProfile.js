@@ -57,31 +57,32 @@ const UserProfile = () => {
     }
 
     return (
-        <div>
-            <h1>{user.displayName}</h1>
-            <hr />
-            <h5 className='mb-5'>{user.email}</h5>
-            <form onSubmit={saveProfile} className='d-flex mb-2 mx-auto flex-column user-profile-container text-start'>
+        <div className='user-profile'>
+            <form onSubmit={saveProfile} className='d-flex mb-2 mx-auto flex-column user-profile-container justify-content-center text-start'>
+
+                <h1 className='text-center'>{user.displayName}</h1>
+                <hr />
+                <h5 className='mb-5 text-center user-email'>{user.email}</h5>
 
                 {toggle === true ? (
-                    profiles?.address ? <h4>Address<span className='text-white'>....</span>: {profiles?.address}</h4> : ''
+                    profiles?.address ? <h4 className="user-profile-h4-text">Address<span className='text-white'>...</span>: <span className='inside-user-profile-h4-text'>{profiles?.address}</span></h4> : ''
                 ) : <input required name='address' className='mb-2' placeholder='Address' defaultValue={profiles.address} />}
 
                 {toggle === true ? (
-                    profiles?.phone ? <h4>Phone<span className='text-white'>.......</span>: {profiles?.phone} </h4> : ''
+                    profiles?.phone ? <h4 className="user-profile-h4-text">Phone<span className='text-white'>......</span>: <span className='inside-user-profile-h4-text'>{profiles?.phone}</span></h4> : ''
                 ) : <input required className='mb-2' placeholder='Phone number' name='phone' defaultValue={profiles.phone} />}
 
                 {toggle === true ? (
-                    profiles?.education ? <h4>Education: {profiles?.education} </h4> : ''
+                    profiles?.education ? <h4 className="user-profile-h4-text">Education : <span className='inside-user-profile-h4-text'>{profiles?.education}</span></h4> : ''
                 ) : <input required className='mb-2' placeholder='Education' name='education' defaultValue={profiles.education} />}
 
                 {toggle === true ? (
-                    profiles?.social ? <h4>Linkedin<span className='text-white'>...</span>: {profiles?.social} </h4> : ''
+                    profiles?.social ? <h4 className="user-profile-h4-text">Linkedin<span className='text-white'>...</span>: <span className='inside-user-profile-h4-text'>{profiles?.social}</span></h4> : ''
                 ) : <input required className='mb-2' placeholder='Linkedin' name='social' defaultValue={profiles.social} />}
                 {
                     toggle === true ? <button
 
-                        className='my-5 btn btn-primary text-uppercase' onClick={editProfile}>Edit Profile</button> : <button
+                        className='my-5 edit-profile-button text-uppercase' onClick={editProfile}>Edit Profile</button> : <button
                             type='submit' className='mb-5 text-uppercase btn btn-success' >Save changes</button>
                 }
             </form>
