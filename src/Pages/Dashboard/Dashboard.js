@@ -9,7 +9,6 @@ const Dashboard = () => {
                 <button class="dashboard-button" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Open Dashboard</button>
             </div>
             <div className="container">
-                <h2 className='dashboard-title'>Dashboard</h2>
                 <Outlet></Outlet>
             </div>
 

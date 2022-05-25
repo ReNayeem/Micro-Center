@@ -22,19 +22,18 @@ const Login = () => {
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
     const navigate = useNavigate();
-
     const location = useLocation();
+    let from = location.state?.from?.pathname || "/";
 
     let errorElement;
-    let from = location.state?.from?.pathname || "/";
 
     if (loading || sending) {
         return <Loading></Loading>
     }
 
     if (user) {
-        // navigate(from, { replace: true });
-        navigate('/myList');
+        navigate(from, { replace: true });
+        // navigate('/myList');
     }
 
     if (error) {

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 import useReviews from '../../../hooks/useReviews';
+import Loading from '../../../Shared/Loading/Loading';
 import Reviews from '../Reviews/Reviews';
 import './Review.css'
 
@@ -18,6 +19,9 @@ const Review = () => {
                     <hr />
                     <p>See our valuable new customers review</p>
                 </div>
+                {
+                    reviews.length === 0 ? (<Loading></Loading>) : ''
+                }
                 <div className='home-reviews container'>
                     {
                         reviews.slice(0, 3).map(review => <Reviews key={review.id} review={review}></Reviews>)

@@ -26,8 +26,8 @@ const Header = () => {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto navbar-link">
                             <NavLink className={({ isActive }) => (isActive ? "active-link nav-link" : "link nav-link ")} as={Link} to="/">Home</NavLink>
-                            <NavLink className={({ isActive }) => (isActive ? "active-link nav-link" : "link nav-link ")} as={Link} to="/all-items">All Items</NavLink>
-                            <NavLink className={({ isActive }) => (isActive ? "active-link nav-link" : "link nav-link ")} as={Link} to="/all-reviews">All Reviews</NavLink>
+                            <NavLink className={({ isActive }) => (isActive ? "active-link nav-link" : "link nav-link ")} as={Link} to="/all-items">Items</NavLink>
+                            <NavLink className={({ isActive }) => (isActive ? "active-link nav-link" : "link nav-link ")} as={Link} to="/all-reviews">Reviews</NavLink>
                             <NavLink className={({ isActive }) => (isActive ? "active-link nav-link" : "link nav-link ")} as={Link} to="blogs">Blogs</NavLink>
                         </Nav>
                         <Nav className='navbar-link'>

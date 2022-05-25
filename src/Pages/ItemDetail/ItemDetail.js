@@ -23,7 +23,7 @@ const ItemDetail = () => {
                 <div className='d-flex flex-wrap item-details justify-content-center align-items-center'>
                     <div className='item-image text-start'>
                         <img className='item-detail-image' src={img} alt="" />
-                        <h5 className='mt-1 mb-3'>Supported Description:</h5>
+                        <h5 className='mt-3 mb-3'>Supported Components:</h5>
                         <p>Processor up-to: {processor}</p>
                         <p>Graphics Card up-to: {gpu}</p>
                     </div>

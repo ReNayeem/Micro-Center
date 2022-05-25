@@ -8,3 +8,13 @@ th {
     text-align: left;
     padding: 8px;
 }
+
+.accordion-3 {
+    border-bottom: none;
+}
+
+.accordion-item {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
