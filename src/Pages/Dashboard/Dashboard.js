@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, NavLink, Outlet } from 'react-router-dom';
 import './style.css'
 
 const Dashboard = () => {
@@ -17,11 +17,11 @@ const Dashboard = () => {
                     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body text-start">
-                    <p> <Link className='nav-link text-dark' to='/dashboard'>My Orders</Link></p>
-                    <p> <Link className='nav-link text-dark' to='/dashboard/add-review'>Add A review</Link></p>
-                    <p>
-                        <Link className='nav-link text-dark' to='/dashboard/user-profile'>Profile</Link>
-                    </p>
+                    <NavLink className={({ isActive }) => (isActive ? "dashboard-link nav-link" : "dashboard-link-inactive nav-link ")} as={Link} to="/dashboard/profile">Profile</NavLink>
+
+                    <NavLink id='dashboard-link' className={({ isActive }) => (isActive ? "dashboard-link nav-link" : "dashboard-link-inactive nav-link ")} as={Link} to="/dashboard/my-orders">My orders</NavLink>
+
+                    <NavLink id='dashboard-link' className={({ isActive }) => (isActive ? "dashboard-link nav-link" : "dashboard-link-inactive nav-link ")} as={Link} to="/dashboard/add-review">Add a review</NavLink>
                 </div>
             </div>
 

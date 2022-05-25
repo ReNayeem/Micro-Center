@@ -3,6 +3,17 @@
     height: calc(100vh - 514.8px - 69px);
     background-color: whitesmoke;
     max-width: 11rem;
+    border: none;
+    border-radius: 0px 0px 3rem 0px;
+}
+
+.dashboard-link {
+    color: black !important;
+    transition: all ease 1s;
+}
+
+.dashboard-link-inactive {
+    color: rgb(101, 101, 101);
 }
 
 .dashboard-button {

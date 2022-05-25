@@ -17,6 +17,7 @@ import Dashboard from './Pages/Dashboard/Dashboard';
 import MyOrders from './Pages/Dashboard/MyOrders';
 import AddReview from './Pages/Dashboard/AddReview';
 import UserProfile from './Pages/Dashboard/UserProfile';
+import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
 
 function App() {
 
@@ -34,7 +35,9 @@ function App() {
         <Route path="/register" element={<Register></Register>}></Route>
         <Route path="/item-detail" element={<ItemDetail></ItemDetail>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
+        <Route path="/dashboard" element={<NotFound></NotFound>}></Route>
         <Route path="/all-reviews" element={<AllReviews></AllReviews>}></Route>
+        <Route path="/portfolio" element={<MyPortfolio></MyPortfolio>}></Route>
 
         <Route path='/item/:itemId'
           element={
@@ -43,9 +46,9 @@ function App() {
         ></Route>
 
         <Route path='/dashboard' element={user ? <Dashboard /> : <Authentication></Authentication>}>
-          <Route index element={<MyOrders />}></Route>
+          <Route path='my-orders' element={<MyOrders />}></Route>
           <Route path='add-review' element={<AddReview />}></Route>
-          <Route path='user-profile' element={<UserProfile />}></Route>
+          <Route path='profile' element={<UserProfile />}></Route>
         </Route>
 
       </Routes>
