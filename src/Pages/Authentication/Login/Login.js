@@ -9,6 +9,7 @@ import auth from '../../../firebase.init';
 import Loading from '../../../Shared/Loading/Loading';
 import PageTitle from '../../../Shared/PageTitle/PageTitle';
 import toast from 'react-hot-toast';
+import useToken from '../../../hooks/useToken';
 
 
 const Login = () => {
@@ -27,13 +28,14 @@ const Login = () => {
 
     let errorElement;
 
+    const [token] = useToken(user)
+
     if (loading || sending) {
         return <Loading></Loading>
     }
 
-    if (user) {
+    if (token || user) {
         navigate(from, { replace: true });
-        // navigate('/myList');
     }
 
     if (error) {

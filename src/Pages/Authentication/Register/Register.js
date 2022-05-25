@@ -3,6 +3,7 @@ import { Form } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import useToken from '../../../hooks/useToken';
 import Loading from '../../../Shared/Loading/Loading';
 import PageTitle from '../../../Shared/PageTitle/PageTitle';
 import SocialLogin from '../SocialLogin/SocialLogin';
@@ -19,6 +20,8 @@ const Register = () => {
 
     const [updateProfile, updating] = useUpdateProfile(auth);
 
+    const [token] = useToken(user)
+
     const navigate = useNavigate();
     const location = useLocation();
     let from = location.state?.from?.pathname || "/";
@@ -27,7 +30,7 @@ const Register = () => {
         return <Loading></Loading>
     }
 
-    if (user) {
+    if (token || user) {
         navigate(from, { replace: true });
     }
 
