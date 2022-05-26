@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import toast from 'react-hot-toast';
 import auth from '../../firebase.init';
+import PageTitle from '../../Shared/PageTitle/PageTitle';
 import './style.css'
 const UserProfile = () => {
     const [user] = useAuthState(auth)
@@ -66,19 +67,19 @@ const UserProfile = () => {
 
                 {toggle === true ? (
                     profiles?.address ? <h4 className="user-profile-h4-text">Address<span className='text-white'>...</span>: <span className='inside-user-profile-h4-text'>{profiles?.address}</span></h4> : ''
-                ) : <input required name='address' className='mb-2' placeholder='Address' defaultValue={profiles.address} />}
+                ) : <input name='address' className='mb-2' placeholder='Address' defaultValue={profiles?.address} />}
 
                 {toggle === true ? (
                     profiles?.phone ? <h4 className="user-profile-h4-text">Phone<span className='text-white'>......</span>: <span className='inside-user-profile-h4-text'>{profiles?.phone}</span></h4> : ''
-                ) : <input required className='mb-2' placeholder='Phone number' name='phone' defaultValue={profiles.phone} />}
+                ) : <input className='mb-2' placeholder='Phone number' name='phone' defaultValue={profiles?.phone} />}
 
                 {toggle === true ? (
                     profiles?.education ? <h4 className="user-profile-h4-text">Education : <span className='inside-user-profile-h4-text'>{profiles?.education}</span></h4> : ''
-                ) : <input required className='mb-2' placeholder='Education' name='education' defaultValue={profiles.education} />}
+                ) : <input className='mb-2' placeholder='Education' name='education' defaultValue={profiles?.education} />}
 
                 {toggle === true ? (
                     profiles?.social ? <h4 className="user-profile-h4-text">Linkedin<span className='text-white'>...</span>: <span className='inside-user-profile-h4-text'>{profiles?.social}</span></h4> : ''
-                ) : <input required className='mb-2' placeholder='Linkedin' name='social' defaultValue={profiles.social} />}
+                ) : <input className='mb-2' placeholder='Linkedin' name='social' defaultValue={profiles?.social} />}
                 {
                     toggle === true ? <button
 
@@ -88,7 +89,7 @@ const UserProfile = () => {
             </form>
 
 
-
+            <PageTitle title="Profile"></PageTitle>
         </div>
     );
 };

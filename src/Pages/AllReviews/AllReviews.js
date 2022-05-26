@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import useReviews from '../../hooks/useReviews';
 import Loading from '../../Shared/Loading/Loading';
+import PageTitle from '../../Shared/PageTitle/PageTitle';
 import Reviews from '../Home/Reviews/Reviews';
 import './AllReviews.css'
 
@@ -34,6 +35,7 @@ const AllReviews = () => {
                     </Link>
                 </div>
             </div>
+            <PageTitle title="Reviews"></PageTitle>
         </div>
     );
 };

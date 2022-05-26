@@ -1,0 +1,6 @@
+.hoverme:hover{
+    transform: scale(1.05)  ;
+   
+    transition:all ease 1s;
+   
+}

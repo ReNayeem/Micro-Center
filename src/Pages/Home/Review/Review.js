@@ -7,6 +7,7 @@ import './Review.css'
 
 const Review = () => {
     const [reviews, setReviews] = useReviews();
+    const reverseReviews = reviews.reverse();
     const navigate = useNavigate()
     const clickToAllReviews = () => {
         navigate('/all-reviews')
@@ -24,7 +25,7 @@ const Review = () => {
                 }
                 <div className='home-reviews container'>
                     {
-                        reviews.slice(0, 3).map(review => <Reviews key={review.id} review={review}></Reviews>)
+                        reverseReviews.slice(0, 3).map(review => <Reviews key={review.id} review={review}></Reviews>)
                     }
                 </div>
 

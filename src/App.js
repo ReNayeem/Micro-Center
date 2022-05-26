@@ -18,6 +18,11 @@ import MyOrders from './Pages/Dashboard/MyOrders';
 import AddReview from './Pages/Dashboard/AddReview';
 import UserProfile from './Pages/Dashboard/UserProfile';
 import MyPortfolio from './Pages/MyPortfolio/MyPortfolio';
+import AddProduct from './Pages/Dashboard/AddProduct';
+import ManageProductAdmin from './Pages/Dashboard/ManageProductAdmin';
+import AllUser from './Pages/Dashboard/AllUser';
+import OrderAdmin from './Pages/Dashboard/OrderAdmin';
+import Payment from './Pages/Dashboard/Payment';
 
 function App() {
 
@@ -39,6 +44,8 @@ function App() {
         <Route path="/all-reviews" element={<AllReviews></AllReviews>}></Route>
         <Route path="/portfolio" element={<MyPortfolio></MyPortfolio>}></Route>
 
+
+
         <Route path='/item/:itemId'
           element={
             user ? <ItemDetail></ItemDetail> : <Authentication></Authentication>
@@ -49,8 +56,12 @@ function App() {
           <Route path='my-orders' element={<MyOrders />}></Route>
           <Route path='add-review' element={<AddReview />}></Route>
           <Route path='profile' element={<UserProfile />}></Route>
+          <Route path='all-users' element={<AllUser></AllUser>}></Route>
+          <Route path="add-item" element={<AddProduct></AddProduct>}></Route>
+          <Route path="manage-item" element={<ManageProductAdmin></ManageProductAdmin>}></Route>
+          <Route path="manage-order" element={<OrderAdmin></OrderAdmin>}></Route>
+          <Route path="payment/:id" element={<Payment></Payment>}></Route>
         </Route>
-
       </Routes>
 
       <Footer></Footer>

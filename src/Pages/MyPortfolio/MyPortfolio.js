@@ -1,4 +1,5 @@
 import React from 'react';
+import PageTitle from '../../Shared/PageTitle/PageTitle';
 import './MyPortfolio.css'
 
 const MyPortfolio = () => {
@@ -34,6 +35,7 @@ const MyPortfolio = () => {
                 <br />
                 <a href="https://re-bestbuy.netlify.app">Best Buy</a>
             </div>
+            <PageTitle title="Portfolio"></PageTitle>
         </div>
     );
 };

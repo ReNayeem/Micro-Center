@@ -17,3 +17,10 @@
 .reviews-position h5 {
     color: rgb(121, 121, 121);
 }
+
+
+@media only screen and (min-width: 440px) {
+    .reviews-position {
+        min-width: 421px;
+    }
+}
