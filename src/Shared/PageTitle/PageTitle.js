@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 const PageTitle = ({ title }) => {
     return (
         <Helmet>
-            <title> {title} - To-TodoList</title>
+            <title> {title} - Micro Center</title>
         </Helmet>
     );
 };

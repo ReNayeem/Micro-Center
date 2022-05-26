@@ -77,9 +77,9 @@ const Login = () => {
                 <Form.Group controlId="formBasicPassword">
                     <Form.Control ref={passwordRef} name='password' type="password" className='form-input' placeholder="password" required />
                 </Form.Group>
-                <hr />
+                <hr className='login-hr' />
                 {errorElement}
-                <button className='custom-button' type="submit">Sign In</button>
+                <button className='custom-button mx-auto' type="submit">Sign In</button>
                 <p className='text-center my-1'><small>or</small></p>
                 <SocialLogin></SocialLogin>
             </Form>

@@ -68,9 +68,9 @@ const Register = () => {
                     <Form.Group controlId="formBasicPassword">
                         <Form.Control name="password" type="password" className='form-input' placeholder="password" required />
                     </Form.Group>
-                    <hr />
+                    <hr className='login-hr' />
                     {errorElement}
-                    <button className='custom-button' type="submit">Sign Up</button>
+                    <button className='custom-button mx-auto' type="submit">Sign Up</button>
                 </Form>
             </div>
             <PageTitle title="Register"></PageTitle>

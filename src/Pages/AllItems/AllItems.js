@@ -12,7 +12,7 @@ const AllItems = () => {
         <div id="items" className='container mb-5'>
             <PageTitle title="All Items"></PageTitle>
             <div className="row">
-                <div id='items-title' className='mb-4 mt-5 third-section'>
+                <div id='items-title' className='mb-4 mt-5 upcoming'>
                     <h1>All Items</h1>
                     <hr />
                     <p>Get Your Desired Item from All Items</p>
@@ -31,9 +31,9 @@ const AllItems = () => {
                 </div>
             </div>
             <div className='d-flex mt-3 justify-content-end'>
-                <Link as={Link} to="/AddItem">
+                <Link as={Link} to="/all-reviews">
                     <button className="banner-button">
-                        <span className="hover-underline-animation"> Add New Item </span>
+                        <span> go to reviews </span>
                         <svg id="arrow-horizontal" xmlns="http://www.w3.org/2000/svg" width="30" height="10" viewBox="0 0 46 16">
                             <path id="Path_10" data-name="Path 10" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" transform="translate(30)"></path>
                         </svg>

@@ -7,7 +7,7 @@ const Blogs = () => {
     return (
         <div className='mb-5'>
             <PageTitle title="Blogs"></PageTitle>
-            <div id='items-title' className='mb-4 mt-5 third-section'>
+            <div id='items-title' className='mb-4 mt-5 upcoming'>
                 <h1>Blogs</h1>
                 <hr />
                 <p>😶😒😊😁🤣😂✌️🤞😉😎😅🤩😏🤨🙃🤪</p>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import useReviews from '../../hooks/useReviews';
 import Loading from '../../Shared/Loading/Loading';
 import Reviews from '../Home/Reviews/Reviews';
@@ -21,6 +22,16 @@ const AllReviews = () => {
                     {
                         reviews.map(review => <Reviews key={review.id} review={review}></Reviews>)
                     }
+                </div>
+                <div className='d-flex container justify-content-end'>
+                    <Link as={Link} to="/dashboard/add-review">
+                        <button className="banner-button">
+                            <span> Add a review </span>
+                            <svg id="arrow-horizontal" xmlns="http://www.w3.org/2000/svg" width="30" height="10" viewBox="0 0 46 16">
+                                <path id="Path_10" data-name="Path 10" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" transform="translate(30)"></path>
+                            </svg>
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>

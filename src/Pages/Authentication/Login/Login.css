@@ -65,3 +65,7 @@
     font-size: 1rem;
     border: none !important;
 }
+
+.login-hr {
+    max-width: 230px;
+}

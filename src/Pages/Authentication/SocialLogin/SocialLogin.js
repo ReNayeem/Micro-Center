@@ -25,7 +25,7 @@ const SocialLogin = () => {
     return (
         <>
             {errorElement}
-            < button onClick={() => signInWithGoogle()} className='custom-button google-button' type="submit" > Google Sign In</button >
+            < button onClick={() => signInWithGoogle()} className='custom-button google-button mx-auto' type="submit" > Google Sign In</button >
         </>
     );
 };

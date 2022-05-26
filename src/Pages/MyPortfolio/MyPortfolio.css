@@ -1,0 +1,30 @@
+.portfolio-left-half {
+    width: 50%;
+    padding: 3rem;
+}
+
+.portfolio-right-half {
+    width: 50%;
+    padding: 3rem;
+}
+
+.portfolio-title-text {
+    font-weight: 700;
+}
+
+.portfolio-mini-title {
+    font-weight: 600;
+}
+
+
+@media only screen and (max-width: 440px) {
+    .portfolio-left-half {
+        width: auto;
+        padding-bottom: 0rem;
+        padding-top: 0rem;
+    }
+
+    .portfolio-right-half {
+        width: auto;
+    }
+}
