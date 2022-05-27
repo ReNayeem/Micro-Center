@@ -71,6 +71,22 @@
     background-color: #001e73;
 }
 
+.submit-button {
+    background-color: #0005a3;
+    color: white;
+    padding: .6rem 3rem;
+    cursor: pointer;
+    font-weight: 600;
+    border: 2px solid #0005a3;
+    transition: border 1s, background-color 1s, color .5s;
+}
+
+.submit-button:hover {
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+}
+
 @media only screen and (max-width: 440px) {
     .dashboard-button {
         position: fixed;

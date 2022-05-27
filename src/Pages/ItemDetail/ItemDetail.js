@@ -133,94 +133,36 @@ const ItemDetail = () => {
                         <p>Quantity Available: {quantity}</p>
                         <p className='item-description-bold'>Minimum Order: {minimumOrder}</p>
 
+                        <form onSubmit={checkCount}>
 
-
-                        <div className='col mx-auto  col-sm-6 col-md-7 bg-success bg-gradient rounded-3 border border-warning border-5"'>
-                            <Form onSubmit={checkCount}>
-                                <Form.Group className="mb-3 p-2" controlId="formBasicEmail">
-                                    <Form.Label>
-                                        <h3>Product Count</h3>
-                                    </Form.Label>
-                                    <Form.Control
-                                        name="name"
-                                        type="text"
-                                        className="mb-3 "
-                                        value={user?.displayName}
-                                        readOnly
-                                    />
-                                    <Form.Control
-                                        name="email"
-                                        type="text"
-                                        className="mb-3 "
-                                        value={user?.email}
-                                        readOnly
-
-                                    />
-                                    <Form.Control
-                                        name="address"
-                                        type="text"
-                                        placeholder="Enter your address"
-                                        className="mb-3 "
-                                        required
-                                    />
-                                    <Form.Control
-                                        name="phone"
-                                        type="number"
-                                        placeholder="Enter your number"
-                                        className="mb-3 "
-                                        required
-                                    />
-                                    <Form.Control
-                                        name="unit"
-                                        type="number"
-                                        placeholder="Enter total unit number"
-                                        className="mb-3 "
-                                        required
-
-                                    />
-                                    <Form.Text className=" d-flex fw-bolder flex-row-reverse text-info">
-                                        You have to enter the value in Number.
-                                    </Form.Text>
-                                </Form.Group>
-
-                                <Button
-                                    disabled={count}
-                                    className="btn btn-dark"
-                                    type="submit"
-                                >
-                                    Pay
-                                </Button>
-                            </Form>
-
-                        </div>
-
-
-
-                        {/*                         
-
-                        <form className='update-item' >
-                            <span className="d-flex">
-                                <input placeholder='add quantity here' className='quantity-input text-center' type="number" name="number" required /> <br />
-                                <div className="update-stock-button">
-                                    <i class="fa-solid fa-cart-shopping cart-icon"></i>
-                                    <input className='buy-now-button' type="submit" value="BUY NOW" />
-                                </div>
-                            </span>
-                        </form> */}
+                            <div class="mb-3">
+                                <input type="text"
+                                    readOnly
+                                    value={user?.displayName} name='name' class="form-control" />
+                            </div>
+                            <div class="mb-3">
+                                <input type="text"
+                                    readOnly
+                                    value={user?.email} name='email' class="form-control" />
+                            </div>
+                            <div class="mb-3">
+                                <input name='address'
+                                    required placeholder='Enter your address' type="text" class="form-control" />
+                            </div>
+                            <div class="mb-3">
+                                <input name='phone'
+                                    required placeholder='Enter your contact number' type="number" class="form-control" />
+                            </div>
+                            <div class="mb-3">
+                                <input name='unit' placeholder='Enter quantity number' class="form-control"
+                                    required rows="3"></input>
+                            </div>
+                            <button className='purchase-button' disabled={count} type='submit'>BUY NOW</button>
+                        </form>
                     </div>
                 </div>
 
             </div>
-            {/* <div className='d-flex mt-3 justify-content-center justify-content-lg-end'>
-                <Link as={Link} to="/manage">
-                    <button className="banner-button">
-                        <span className="hover-underline-animation"> Manage items </span>
-                        <svg id="arrow-horizontal" xmlns="http://www.w3.org/2000/svg" width="30" height="10" viewBox="0 0 46 16">
-                            <path id="Path_10" data-name="Path 10" d="M8,0,6.545,1.455l5.506,5.506H-30V9.039H12.052L6.545,14.545,8,16l8-8Z" transform="translate(30)"></path>
-                        </svg>
-                    </button>
-                </Link>
-            </div> */}
         </div>
     );
 };

@@ -1,5 +1,5 @@
 .item-detail-image {
-    max-height: 533px;
+    max-height: 433px;
 }
 
 .item-image {
@@ -87,6 +87,22 @@
     background-color: transparent;
     border: none;
     padding-left: 1rem;
+}
+
+.purchase-button {
+    background-color: #ffe000;
+    color: black;
+    padding: .6rem 3rem;
+    cursor: pointer;
+    font-weight: 600;
+    border: 2px solid #ffe000;
+    transition: border 1s, background-color 1s, color .5s;
+}
+
+.purchase-button:hover {
+    background-color: black;
+    color: white;
+    border: 2px solid black;
 }
 
 @media only screen and (max-width: 440px) {

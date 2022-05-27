@@ -3,6 +3,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import toast from 'react-hot-toast';
 import auth from '../../firebase.init';
 import PageTitle from '../../Shared/PageTitle/PageTitle';
+import './style.css'
 
 const AddReview = () => {
     const [user] = useAuthState(auth);
@@ -41,14 +42,18 @@ const AddReview = () => {
     };
     return (
         <div>
-            <div className="w-50 my-5 mx-auto ">
+            <div className="w-50 mb-5 mx-auto ">
 
-                <h1>Add New Review</h1>
+                <div className='p-5'>
+                    <h2>Add your review</h2>
+                    <hr />
+                    <p>Add your fav items review here</p>
+                </div>
                 <form onSubmit={HandleAddItem}>
 
                     <div class="mb-3">
                         <input type="text"
-
+                            readOnly
                             value={user?.displayName} name='userName' class="form-control" />
                     </div>
                     <div class="mb-3">
@@ -60,12 +65,10 @@ const AddReview = () => {
                             required placeholder='Ratings' type="number" class="form-control" />
                     </div>
                     <div class="mb-3">
-                        <textarea name='description' placeholder='type your review here' class="form-control"
+                        <textarea name='description' placeholder='Type your review here' class="form-control"
                             required rows="3"></textarea>
                     </div>
-                    <div class="mb-3">
-                        <input className='btn fw-bold btn-success  btn-outline-warning' type="submit" value='Add review' />
-                    </div>
+                    <button className='submit-button' type='submit'>ADD REVIEW</button>
                 </form>
             </div>
 
