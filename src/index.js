@@ -4,21 +4,26 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import "swiper/css/bundle";
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { HelmetProvider } from 'react-helmet-async';
 
+
 const queryClient = new QueryClient()
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
-  <BrowserRouter>
-    <HelmetProvider>
-      <QueryClientProvider client={queryClient}>
-        <React.StrictMode>
+  <React.StrictMode>
+    <QueryClientProvider client={queryClient}>
+      <HelmetProvider>
+        <BrowserRouter>
           <App />
-        </React.StrictMode>
-      </QueryClientProvider>
-    </HelmetProvider>
-  </BrowserRouter>
+        </BrowserRouter>
+      </HelmetProvider>
+    </QueryClientProvider>
+
+
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

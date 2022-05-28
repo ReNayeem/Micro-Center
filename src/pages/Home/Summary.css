@@ -1,0 +1,30 @@
+.trust {
+    background: rgb(36, 109, 157);
+    background: linear-gradient(90deg, rgba(36, 109, 157, 1) 0%, rgba(189, 130, 90, 1) 26%, rgba(217, 114, 134, 1) 47%, rgba(25, 125, 176, 1) 71%, rgba(209, 12, 71, 0.767) 100%);
+}
+
+.trust-icon {
+    font-size: 50px;
+    margin-bottom: .5rem;
+}
+
+.trust-h1 {
+    font-weight: 700;
+    font-size: 2.5em;
+}
+
+.trust-h3,
+.trust-icon {
+    color: white;
+}
+
+.trust2 {
+    width: 230px;
+    height: auto;
+}
+
+.trust-h3 {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+}

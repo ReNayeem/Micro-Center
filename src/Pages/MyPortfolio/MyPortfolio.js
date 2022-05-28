@@ -1,5 +1,5 @@
 import React from 'react';
-import PageTitle from '../../Shared/PageTitle/PageTitle';
+import PageTitle from '../Shared/PageTitle';
 import './MyPortfolio.css'
 
 const MyPortfolio = () => {

@@ -1,0 +1,91 @@
+.item {
+    border: 1px solid #e9e9e9;
+    text-align: center;
+    padding: 1rem;
+    padding-bottom: 3rem;
+    position: relative;
+}
+
+.item-img {
+    height: 300px;
+}
+
+.item-img>img {
+    border-radius: 0;
+    max-height: 300px;
+    max-width: 300px;
+}
+
+.manage-button {
+    bottom: 1rem !important;
+    position: absolute !important;
+}
+
+.item-name {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.item-description-2 {
+    font-size: 14px;
+    line-height: 26px;
+    color: #626262;
+    margin-top: .4rem;
+    margin-bottom: .4rem;
+}
+
+.item-detail {
+    font-size: 15px;
+    margin: 0;
+}
+
+
+.cta {
+    border: none;
+    background: none;
+}
+
+.cta span {
+    padding-bottom: 7px;
+    letter-spacing: 4px;
+    font-size: 10px;
+    padding-right: 15px;
+    text-transform: uppercase;
+}
+
+.cta svg {
+    transform: translateX(-8px);
+    transition: all 0.3s ease;
+}
+
+.cta:hover svg {
+    transform: translateX(0);
+}
+
+.cta:active svg {
+    transform: scale(0.9);
+}
+
+.hover-underline-animation {
+    position: relative;
+    color: black;
+    padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1.5px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}

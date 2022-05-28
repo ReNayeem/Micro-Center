@@ -1,0 +1,11 @@
+.myCarousel {
+    border: none;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.review-description {
+    color: rgb(121, 121, 121) !important;
+}

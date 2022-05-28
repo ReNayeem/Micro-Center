@@ -1,9 +1,9 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, NavLink, Outlet } from 'react-router-dom';
-import auth from '../../firebase.init';
-import useAdmin from '../../hooks/useAdmin';
-import './style.css'
+import auth from '../../Firebase/firebase.init';
+import useAdmin from '../../Hooks/useAdmin';
+import './Dashboard.css'
 
 const Dashboard = () => {
     const [user] = useAuthState(auth)
@@ -24,22 +24,32 @@ const Dashboard = () => {
                 <div class="offcanvas-body text-start">
                     <NavLink className={({ isActive }) => (isActive ? "dashboard-link nav-link" : "dashboard-link-inactive nav-link ")} as={Link} to="/dashboard/profile">Profile</NavLink>
 
-                    <NavLink id='dashboard-link' className={({ isActive }) => (isActive ? "dashboard-link nav-link" : "dashboard-link-inactive nav-link ")} as={Link} to="/dashboard/my-orders">My orders</NavLink>
+                    {
+                        !admin && <NavLink id='dashboard-link' className={({ isActive }) => (isActive ? "dashboard-link nav-link" : "dashboard-link-inactive nav-link ")} as={Link} to="/dashboard/myorders">My orders</NavLink>
+                    }
 
-                    <NavLink id='dashboard-link' className={({ isActive }) => (isActive ? "dashboard-link nav-link" : "dashboard-link-inactive nav-link ")} as={Link} to="/dashboard/add-review">Add a review</NavLink>
+                    {
+                        !admin && <NavLink id='dashboard-link' className={({ isActive }) => (isActive ? "dashboard-link nav-link" : "dashboard-link-inactive nav-link ")} as={Link} to="/dashboard/addreview">Add a review</NavLink>
+                    }
 
-                    <NavLink id='dashboard-link' className={({ isActive }) => (isActive ? "dashboard-link nav-link" : "dashboard-link-inactive nav-link ")} as={Link} to="/dashboard/add-item">Add Item</NavLink>
+                    {
+                        admin && <NavLink id='dashboard-link' className={({ isActive }) => (isActive ? "dashboard-link nav-link" : "dashboard-link-inactive nav-link ")} as={Link} to="/dashboard/addproduct">Add Product</NavLink>
+                    }
 
-                    <NavLink id='dashboard-link' className={({ isActive }) => (isActive ? "dashboard-link nav-link" : "dashboard-link-inactive nav-link ")} as={Link} to="/dashboard/manage-item">Manage Item</NavLink>
+                    {
+                        admin && <NavLink id='dashboard-link' className={({ isActive }) => (isActive ? "dashboard-link nav-link" : "dashboard-link-inactive nav-link ")} as={Link} to="/dashboard/manageproduct">Manage Product</NavLink>
+                    }
 
+                    {
+                        admin && <NavLink id='dashboard-link' className={({ isActive }) => (isActive ? "dashboard-link nav-link" : "dashboard-link-inactive nav-link ")} as={Link} to="/dashboard/allorder">Manage Orders</NavLink>
+                    }
 
-                    <NavLink id='dashboard-link' className={({ isActive }) => (isActive ? "dashboard-link nav-link" : "dashboard-link-inactive nav-link ")} as={Link} to="/dashboard/manage-order">Manage Orders</NavLink>
-
-                    <NavLink id='dashboard-link' className={({ isActive }) => (isActive ? "dashboard-link nav-link" : "dashboard-link-inactive nav-link ")} as={Link} to="/dashboard/all-users">All Users</NavLink>
+                    {
+                        admin && <NavLink id='dashboard-link' className={({ isActive }) => (isActive ? "dashboard-link nav-link" : "dashboard-link-inactive nav-link ")} as={Link} to="/dashboard/allUsers">All Users</NavLink>
+                    }
 
                 </div>
             </div>
-
         </div>
     );
 };

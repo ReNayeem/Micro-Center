@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+.items-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.item-h5 {
+    text-transform: uppercase;
+    font-size: 15px;
+    line-height: 26.4px;
+    margin-bottom: 10px;
+    display: block;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #aab34f;
+}
+
+.items-h1 {
+    font-size: 30px;
+    line-height: 1.2;
+    color: #18191F;
+    padding: 10px;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid black;
+}
+
+.item-h1 {
+    text-transform: uppercase;
+    font-size: 30px;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    line-height: 1.2;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid black;
+}
+
+.items-hr {
+    align-items: flex-start !important;
+    display: flex !important;
+    justify-content: start;
+}
+
+#items-title {
+    margin-bottom: 2rem !important;
+}
+
+#app {
+    height: 100%
+}
+
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media only screen and (max-width:576px) {
+    .items-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 992px) {
+    .items-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

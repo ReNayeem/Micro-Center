@@ -1,15 +1,15 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 const useReviews = () => {
-    const [reviews, setReviews] = useState([]);
+  const [reviews, setReviews] = useState([]);
+  useEffect(() => {
+    fetch('https://micro-center.herokuapp.com/reviews')
+      .then((res) => res.json())
+      .then((data) => setReviews(data.reverse()));
+  }, []);
+  const ulta = [...reviews];
 
-    useEffect(() => {
-        fetch('http://localhost:5000/reviews')
-            .then(res => res.json())
-            .then(data => setReviews(data.reverse()));
-    }, []);
-
-    return [reviews, setReviews]
-}
+  return [ulta, setReviews];
+};
 
 export default useReviews;
