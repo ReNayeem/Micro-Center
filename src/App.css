@@ -127,30 +127,3 @@ html::-webkit-scrollbar-track {
 }
 
 /* custom scrollbar for other browser end */
-
-@media only screen and (max-width: 440px) {
-
-  /* custom firefox scrollbar start */
-  html {
-    scrollbar-width: normal;
-    scrollbar-color: #fd6204 rgb(231, 231, 231);
-  }
-
-  /* custom firefox scrollbar end */
-
-  /* custom scrollbar for other browser start */
-  html::-webkit-scrollbar {
-    width: 1vw;
-  }
-
-  html::-webkit-scrollbar-thumb {
-    background-color: #fd6204;
-  }
-
-
-  html::-webkit-scrollbar-track {
-    background-color: rgb(231, 231, 231);
-  }
-
-  /* custom scrollbar for other browser end */
-}

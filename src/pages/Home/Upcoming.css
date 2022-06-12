@@ -69,7 +69,7 @@
 
 /* media query tab start */
 
-@media only screen and (max-width: 1060px) {
+@media only screen and (max-width: 1141px) {
     hr {
         width: 600px !important;
     }

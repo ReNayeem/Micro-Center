@@ -59,7 +59,7 @@ const UserProfile = () => {
       <form onSubmit={saveProfile} className='d-flex mb-2 mx-auto flex-column user-profile-container justify-content-center text-start'>
 
         <h1 className='text-center'>{user.displayName}</h1>
-        <hr />
+        <hr className='user-profile-hr' />
         <h5 className='mb-5 text-center user-email'>{user.email}</h5>
 
         {toggle === true ? (

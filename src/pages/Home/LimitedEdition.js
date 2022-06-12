@@ -10,7 +10,7 @@ const LimitedEdition = () => {
                 <p>Just purchase any product once for entry!</p>
                 <div className='d-flex flex-wrap align-items-center justify-content-center'>
                     <div className='limited-edition-detail text-start'>
-                        <h1>eXcross V8 <span className='text-white'>*Limited Edition</span></h1>
+                        <h1 className='give-way-h1'>eXcross V8 <span className='text-white'>*Limited Edition</span></h1>
                         <p><span className='text-white'>Minimum supported components:</span></p>
                         <p><span className='text-white'>Processor:</span> AMD Ryzen 7 5700G</p>
                         <p><span className='text-white'>Speed:</span> 8 core 3.8 gigahertz</p>
