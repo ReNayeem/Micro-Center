@@ -127,7 +127,7 @@ const Buypage = () => {
             <p>Graphics Card up-to: {product.gpu}</p>
           </div>
           <div className='item-description'>
-            <h3 className='item-name'>Best build for: {product.fullName}</h3>
+            <h3 className='item-name'>Best build for: {product.description}</h3>
             <p>{product.rated}</p>
             <p className='item-description-bold'>৳ {price} TK</p>
             <p>Quantity Available: {product.quantity}</p>

@@ -103,6 +103,24 @@
     width: 24% !important;
     border-radius: 50%;
   }
+
+  .carousel .slide {
+    margin-top: 5rem;
+  }
+}
+
+@media only screen and (max-width: 735px) {
+  .myCarousel {
+    box-shadow: 15px 15px 30px #e2e2e2bb,
+      -15px -15px 30px #ffffff83;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  .myCarousel {
+    box-shadow: 5px 5px 10px #e2e2e2bb,
+      -5px -5px 10px #ffffff83;
+  }
 }
 
 @media only screen and (max-width: 400px) {
