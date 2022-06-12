@@ -2,7 +2,6 @@ import toast from 'react-hot-toast';
 import { useQuery } from 'react-query';
 import Loading from '../Shared/Loading';
 import PageTitle from '../Shared/PageTitle';
-import './Dashboard.css'
 
 const AllUsers = () => {
     const { data: users, isLoading, refetch } = useQuery('users', () => fetch('https://micro-center.herokuapp.com/users').then(res => res.json()))
@@ -32,7 +31,7 @@ const AllUsers = () => {
                                 <tr>
                                     <th scope="row">{index + 1}</th>
                                     <td className=' w-50'>{user.email}</td>
-                                    <td className='admin-btn'>
+                                    <td>
                                         {user.role !== 'admin' && <button className='btn btn-sm btn-success'
                                             onClick={() => {
                                                 fetch(`https://micro-center.herokuapp.com/users/admin/${user.email}`, {
@@ -58,7 +57,7 @@ const AllUsers = () => {
                                                     })
                                             }}
                                         >MAKE ADMIN</button>}
-                                        {user.role === 'admin' && <p className='text-center'>ADMIN</p>}
+                                        {user.role === 'admin' && <p className='text-start'>ADMIN</p>}
                                     </td>
                                 </tr>
 

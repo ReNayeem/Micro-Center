@@ -85,7 +85,7 @@ const Order = ({ index, order }) => {
         <Modal.Header closeButton>
           <Modal.Title>Delete Order</Modal.Title>
         </Modal.Header>
-        <Modal.Body className='mx-auto'>Double click for cancel the order</Modal.Body>
+        <Modal.Body className='mx-auto'>Double click Yes for cancel the order</Modal.Body>
         <Modal.Footer className='mx-auto'>
           <Button variant="success" onClick={handleClose}>
             No
